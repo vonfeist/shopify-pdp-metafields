@@ -1589,6 +1589,9 @@
         "quantity_selector": {
           "name": "Quantity selector"
         },
+        "recommendations": {
+          "name": "Recommendations"
+        },
         "variant_picker": {
           "name": "Variant picker",
           "settings": {
@@ -1602,6 +1605,9 @@
               }
             }
           }
+        },
+        "available": {
+          "name": "Show Available"
         },
         "buy_buttons": {
           "name": "Buy buttons",

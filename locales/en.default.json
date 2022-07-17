@@ -102,6 +102,10 @@
   },
   "products": {
     "product": {
+      "available": "Verfügbar",
+      "shipping_free": "Kostenloser Versand ab 150€",
+      "returns": "30 Tage Rückgaberecht",
+      "shipping": "in {{ days }} in deinen Händen",
       "add_to_cart": "Add to cart",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
@@ -147,8 +151,11 @@
       "view_full_details": "View full details",
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
-      "include_taxes": "Tax included.",
+      "include_taxes_html": "inkl. MwSt. zzgl <a href=\"{{ link }}\">Shipping</a>",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+    },
+    "recommendations": {
+      "happy": "Über {{ number }} zufriedene Kunden"
     },
     "modal": {
       "label": "Media gallery"

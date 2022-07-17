@@ -226,7 +226,7 @@
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
                 {%- if shop.taxes_included -%}
-                  {{ 'products.product.include_taxes' | t }}
+                  {{ 'products.product.include_taxes_html' | t }}
                 {%- endif -%}
                 {%- if shop.shipping_policy.body != blank -%}
                   {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -246,6 +246,12 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+          {%- when 'recommendations' -%}
+          <div class="product__recommendations">
+            <img class="product__recommendations--image" src="{{ 'testimonial_1.png' | asset_img_url: 'medium' }}"  alt="Testimonial 1" />
+            <img class="product__recommendations--image" src="{{ 'testimonial_2.png' | asset_img_url: 'medium' }}" alt="Testimonial 1" />
+            <span> {{ 'products.recommendations.happy' | t: number: '3000'}} </span>
+          </div>
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -409,6 +415,26 @@
                 </div>
               </div>
             </noscript>
+          {%- when 'available' -%}
+          {% if product.available %}
+            <div class="product-form__available">
+              <p class="product-form__available--content">
+              {{ 'products.product.available' | t }}
+              </p>
+              {% for tag in product.tags %}
+                {% case tag %}
+                  {% when 'shipping_2' %}
+                    <span class="product-form__available--shipping">
+                      {{ 'products.product.shipping' | t: days: '2 - 4' }}
+                    </span>
+                  {% else %}
+                  <span class="product-form__available--shipping">
+                    {{ 'products.product.shipping' | t: days: '7 ' }}
+                  </span>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          {% endif %}
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
@@ -444,6 +470,24 @@
                           </svg>
                         </div>
                     </button>
+                    <div class="product__payment-options">
+                      {% render 'custom-icon', icon: 'paypal' %}
+                      {% render 'custom-icon', icon: 'mastercard' %}
+                      {% render 'custom-icon', icon: 'visa' %}
+                      {% render 'custom-icon', icon: 'amex' %}
+                      {% render 'custom-icon', icon: 'klarna' %}
+                      {% render 'custom-icon', icon: 'applepay' %}
+                    </div>
+                    <div class="product__shipping">
+                      <span class="free-shipping">
+                        {% render 'custom-icon', icon: 'truck' %}
+                        {{ 'products.product.shipping_free' | t }}
+                      </span>
+                      <span class="free-shipping">
+                        {% render 'custom-icon', icon: 'boxes' %}
+                        {{ 'products.product.returns' | t }}
+                      </span>
+                    </div>
                     {%- if block.settings.show_dynamic_checkout -%}
                       {{ form | payment_button }}
                     {%- endif -%}
@@ -694,6 +738,10 @@
       "limit": 1
     },
     {
+      "type": "recommendations",
+      "name": "t:sections.main-product.blocks.recommendations.name"
+    },
+    {
       "type": "variant_picker",
       "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
@@ -715,6 +763,11 @@
           "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
         }
       ]
+    },
+    {
+      "type": "available",
+      "name": "t:sections.main-product.blocks.available.name",
+      "limit": 1
     },
     {
       "type": "buy_buttons",
