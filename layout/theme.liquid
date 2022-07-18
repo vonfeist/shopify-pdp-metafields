@@ -240,6 +240,7 @@
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
+        order_url: 'https://challenge-codi.myshopify.com/admin/api/2022-07/orders/count.json?status=fulfilled',
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
         cart_url: '{{ routes.cart_url }}',
@@ -249,6 +250,10 @@
       window.cartStrings = {
         error: `{{ 'sections.cart.cart_error' | t }}`,
         quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`
+      }
+
+      window.productStrings =  {
+        recommendation_amount: `{{ 'products.recommendations.happy' | t: number: '[count]'}}`
       }
 
       window.variantStrings = {

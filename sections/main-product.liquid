@@ -247,11 +247,13 @@
               </div>
             {%- endif -%}
           {%- when 'recommendations' -%}
-          <div class="product__recommendations">
-            <img class="product__recommendations--image" src="{{ 'testimonial_1.png' | asset_img_url: 'medium' }}"  alt="Testimonial 1" />
-            <img class="product__recommendations--image" src="{{ 'testimonial_2.png' | asset_img_url: 'medium' }}" alt="Testimonial 1" />
-            <span> {{ 'products.recommendations.happy' | t: number: '3000'}} </span>
-          </div>
+          <recommendation-amount>
+            <div class="product__recommendations">
+              <img class="product__recommendations--image" src="{{ block.settings.testimonial_1 | img_url }}"  alt="{{ block.settings.testimonial_1.alt }}" />
+              <img class="product__recommendations--image" src="{{ block.settings.testimonial_2 | img_url }}" alt="{{ block.settings.testimonial_2.alt }}" />
+              <span class="product__recommdantions--text"></span>
+            </div>
+          </recommendation-amount>
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -739,7 +741,20 @@
     },
     {
       "type": "recommendations",
-      "name": "t:sections.main-product.blocks.recommendations.name"
+      "name": "t:sections.main-product.blocks.recommendations.name",
+      "limit":  1,
+      "settings": [
+      {
+        "type": "image_picker",
+        "id": "testimonial_1",
+        "label": "t:sections.main-product.blocks.recommendations.testimonial_1"
+      },
+      {
+        "type": "image_picker",
+        "id": "testimonial_2",
+        "label": "t:sections.main-product.blocks.recommendations.testimonial_2"
+      }
+      ]
     },
     {
       "type": "variant_picker",

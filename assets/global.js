@@ -136,6 +136,24 @@ function onKeyUpEscape(event) {
   summaryElement.focus();
 }
 
+/* Get amount of orders without returns */
+class RecommendationAmount extends HTMLElement {
+  constructor() {
+    super();
+
+    fetch(`${routes.order_url}`,  {...getConfig()})
+    .then(response => response.json())
+    .then(result => {
+      this.querySelector('.product__recommdantions--text').innerHTML = window.productStrings.recommendation_amount.replace(
+        '[count]',
+        result.count
+      );
+    })
+  }
+}
+
+customElements.define('recommendation-amount', RecommendationAmount);
+
 class QuantityInput extends HTMLElement {
   constructor() {
     super();
@@ -169,6 +187,13 @@ function debounce(fn, wait) {
 function fetchConfig(type = 'json') {
   return {
     method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': `application/${type}` }
+  };
+}
+
+function getConfig(type = 'json') {
+  return {
+    method: 'GET',
     headers: { 'Content-Type': 'application/json', 'Accept': `application/${type}` }
   };
 }
