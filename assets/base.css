@@ -2249,17 +2249,97 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
+  min-height: 50vh;
+}
+
+.header-wrapper.consensed {
+  min-height: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
-.header {
+.header, .header.exploded.condensed {
   display: grid;
-  grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: 
+  'heading heading icons left-icon';
+  grid-template-columns: 2fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
   align-items: center;
+}
+
+.header.exploded {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "heading icons left-icon"
+    ". description description";
+  position: fixed;
+  background-color: #85ABBD;
+}
+
+
+.header.exploded .header__icons, .header.exploded header-drawer {
+  align-self: flex-start;
+}
+
+.header.exploded .header__heading a {
+  transform: scale(3.5);
+  position: fixed;
+  top: 10rem;
+  left: 13rem;
+}
+
+@keyframes height-fade {
+  0% {
+    height: 50vh;
+  }
+  99% {
+    height: 8vh
+  }
+  100% {
+    height: auto;
+  }
+}
+
+.header.condensed {
+  height: auto;
+  background-color: #85ABBD;
+  transition: 1s ease-out all;
+  position: fixed;
+  animation: height-fade 0.5s ease-in-out;
+}
+
+.header.condensed .header__heading a  {
+  transform: scale(1);
+  transition: 0.5s ease-out all;
+  left: 1rem;
+  top: 1rem;
+}
+
+.header__description {
+  display: none;
+}
+
+.header.exploded.condensed .header__description {
+  display: none;
+}
+
+
+.header.exploded .header__description {
+  width: 100%;
+  text-align: right;
+  grid-area: description;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  align-self: flex-start;
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 990px) {
@@ -2416,7 +2496,6 @@ input[type='checkbox'] {
   width: 100%;
   display: block;
   position: absolute;
-  background: rgba(var(--color-foreground), 0.5);
 }
 
 /* Search */

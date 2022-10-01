@@ -409,47 +409,89 @@ customElements.define('menu-drawer', MenuDrawer);
 class HeaderDrawer extends MenuDrawer {
   constructor() {
     super();
+
+    this.header = document.querySelector(".header");
+    this.headerWrapper = document.querySelector(".header-wrapper");
+
+    window.addEventListener("scroll", this.scrollHeader.bind(this));
+  }
+
+  scrollHeader() {
+    if (
+      document.body.scrollTop > 90 ||
+      document.documentElement.scrollTop > 90
+    ) {
+      requestAnimationFrame(this.condensedHeader.bind(this));
+    } else {
+      requestAnimationFrame(this.explodedHeader.bind(this));
+    }
+  }
+
+  condensedHeader() {
+    this.header.classList.add("condensed");
+    this.headerWrapper.classList.add("condensed");
+  }
+
+  explodedHeader() {
+    this.header.classList.remove("condensed");
+    this.headerWrapper.classList.remove("condensed");
   }
 
   openMenuDrawer(summaryElement) {
-    this.header = this.header || document.getElementById('shopify-section-header');
-    this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
-    document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
-    this.header.classList.add('menu-open');
+    this.header =
+      this.header || document.getElementById("shopify-section-header");
+    this.borderOffset =
+      this.borderOffset ||
+      this.closest(".header-wrapper").classList.contains(
+        "header-wrapper--border-bottom"
+      )
+        ? 1
+        : 0;
+    document.documentElement.style.setProperty(
+      "--header-bottom-position",
+      `${parseInt(
+        this.header.getBoundingClientRect().bottom - this.borderOffset
+      )}px`
+    );
+    this.header.classList.add("menu-open");
 
     setTimeout(() => {
-      this.mainDetailsToggle.classList.add('menu-opening');
+      this.mainDetailsToggle.classList.add("menu-opening");
     });
 
-    summaryElement.setAttribute('aria-expanded', true);
+    summaryElement.setAttribute("aria-expanded", true);
     trapFocus(this.mainDetailsToggle, summaryElement);
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
     super.closeMenuDrawer(event, elementToFocus);
-    this.header.classList.remove('menu-open');
+    this.header.classList.remove("menu-open");
   }
 }
 
-customElements.define('header-drawer', HeaderDrawer);
+customElements.define("header-drawer", HeaderDrawer);
 
 class ModalDialog extends HTMLElement {
   constructor() {
     super();
     this.querySelector('[id^="ModalClose-"]').addEventListener(
-      'click',
+      "click",
       this.hide.bind(this, false)
     );
-    this.addEventListener('keyup', (event) => {
-      if (event.code.toUpperCase() === 'ESCAPE') this.hide();
+    this.addEventListener("keyup", (event) => {
+      if (event.code.toUpperCase() === "ESCAPE") this.hide();
     });
-    if (this.classList.contains('media-modal')) {
-      this.addEventListener('pointerup', (event) => {
-        if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) this.hide();
+    if (this.classList.contains("media-modal")) {
+      this.addEventListener("pointerup", (event) => {
+        if (
+          event.pointerType === "mouse" &&
+          !event.target.closest("deferred-media, product-model")
+        )
+          this.hide();
       });
     } else {
-      this.addEventListener('click', (event) => {
+      this.addEventListener("click", (event) => {
         if (event.target === this) this.hide();
       });
     }
@@ -463,61 +505,65 @@ class ModalDialog extends HTMLElement {
 
   show(opener) {
     this.openedBy = opener;
-    const popup = this.querySelector('.template-popup');
-    document.body.classList.add('overflow-hidden');
-    this.setAttribute('open', '');
+    const popup = this.querySelector(".template-popup");
+    document.body.classList.add("overflow-hidden");
+    this.setAttribute("open", "");
     if (popup) popup.loadContent();
     trapFocus(this, this.querySelector('[role="dialog"]'));
     window.pauseAllMedia();
   }
 
   hide() {
-    document.body.classList.remove('overflow-hidden');
-    document.body.dispatchEvent(new CustomEvent('modalClosed'));
-    this.removeAttribute('open');
+    document.body.classList.remove("overflow-hidden");
+    document.body.dispatchEvent(new CustomEvent("modalClosed"));
+    this.removeAttribute("open");
     removeTrapFocus(this.openedBy);
     window.pauseAllMedia();
   }
 }
-customElements.define('modal-dialog', ModalDialog);
+customElements.define("modal-dialog", ModalDialog);
 
 class ModalOpener extends HTMLElement {
   constructor() {
     super();
 
-    const button = this.querySelector('button');
+    const button = this.querySelector("button");
 
     if (!button) return;
-    button.addEventListener('click', () => {
-      const modal = document.querySelector(this.getAttribute('data-modal'));
+    button.addEventListener("click", () => {
+      const modal = document.querySelector(this.getAttribute("data-modal"));
       if (modal) modal.show(button);
     });
   }
 }
-customElements.define('modal-opener', ModalOpener);
+customElements.define("modal-opener", ModalOpener);
 
 class DeferredMedia extends HTMLElement {
   constructor() {
     super();
     const poster = this.querySelector('[id^="Deferred-Poster-"]');
     if (!poster) return;
-    poster.addEventListener('click', this.loadContent.bind(this));
+    poster.addEventListener("click", this.loadContent.bind(this));
   }
 
   loadContent(focus = true) {
     window.pauseAllMedia();
-    if (!this.getAttribute('loaded')) {
-      const content = document.createElement('div');
-      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+    if (!this.getAttribute("loaded")) {
+      const content = document.createElement("div");
+      content.appendChild(
+        this.querySelector("template").content.firstElementChild.cloneNode(true)
+      );
 
-      this.setAttribute('loaded', true);
-      const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
+      this.setAttribute("loaded", true);
+      const deferredElement = this.appendChild(
+        content.querySelector("video, model-viewer, iframe")
+      );
       if (focus) deferredElement.focus();
     }
   }
 }
 
-customElements.define('deferred-media', DeferredMedia);
+customElements.define("deferred-media", DeferredMedia);
 
 class SliderComponent extends HTMLElement {
   constructor() {
@@ -555,10 +601,6 @@ class SliderComponent extends HTMLElement {
     );
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
-
-    if (this.querySelector(".is-infinite")) {
-      this.initInfiniteSlider();
-    }
   }
 
   resetPages() {
@@ -607,11 +649,6 @@ class SliderComponent extends HTMLElement {
     } else {
       this.nextButton.removeAttribute("disabled");
     }
-  }
-
-  initInfiniteSlider() {
-    console.log("oi");
-    this.nextButton.click();
   }
 
   isSlideVisible(element, offset = 0) {
