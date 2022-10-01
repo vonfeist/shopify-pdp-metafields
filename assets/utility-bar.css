@@ -1,0 +1,29 @@
+.utility-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem
+}
+
+.utility-bar p {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.utility-bar ul {
+  display: flex;
+  gap: 3rem;
+}
+
+.utility-bar__link, .utility-bar p {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media screen and (max-width: 749px) {
+  .utility-bar {
+    display: none;
+  }
+} 

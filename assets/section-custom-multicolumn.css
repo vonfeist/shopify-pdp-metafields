@@ -1,0 +1,89 @@
+.custom-multicolumn .multicolumn-card > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
+  padding: 0.8rem;
+}
+
+.multicolumn.background-primary .color-purple .multicolumn-card {
+  background-color: #BF91C4;
+}
+
+.multicolumn.background-primary .color-green .multicolumn-card {
+  background-color: #00966E;
+}
+
+.multicolumn.background-primary .color-blue .multicolumn-card {
+  background-color: #85ABBD;
+  ;
+}
+
+.multicolumn.background-primary .color-yellow .multicolumn-card {
+  background-color: #E3FF21;
+}
+
+
+.custom-multicolumn .multicolumn-card__info h3 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.custom-multicolumn .rte {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.custom-multicolumn .multicolumn-card__info {
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.custom-multicolumn .title-wrapper-with-link {
+  margin-bottom: 1.9rem;
+  justify-content: center;
+}
+
+.custom-multicolumn .slider-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4rem);
+  justify-content: space-between;
+}
+
+.custom-multicolumn .slider-button--prev {
+  transform: rotate(180deg);
+}
+
+.custom-multicolumn .slider-button:disabled {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .custom-multicolumn .grid--peek.slider .grid__item:first-of-type {
+    margin-left: 0.5rem;
+  }
+  .custom-multicolumn .multicolumn .title-wrapper-with-link {
+    margin-bottom: 1.9rem;
+    justify-content: center;
+  }
+
+  .custom-multicolumn .grid--peek.slider .grid__item:first-of-type {
+    margin-left: 0.5rem;
+  }
+
+  .custom-multicolumn .slider.slider--mobile.contains-content-container .slider__slide {
+    width: 80%;
+  }
+
+  .custom-multicolumn .slider.slider--mobile {
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .custom-multicolumn .multicolumn-list.slider, .multicolumn-list.grid--4-col-desktop {
+    gap: 0.5rem;
+  }
+
+  .custom-multicolumn .multicolumn-list__item, .grid--4-col-desktop .multicolumn-list__item {
+    width: calc(25% - 1rem);
+  }
+}
