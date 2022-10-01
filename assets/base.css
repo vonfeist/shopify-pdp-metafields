@@ -240,6 +240,10 @@ html.no-js .no-js-hidden {
   .page-width-tablet {
     padding: 0 5rem;
   }
+
+  .is-hidden-desktop {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 990px) {

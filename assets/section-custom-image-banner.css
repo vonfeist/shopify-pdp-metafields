@@ -1,0 +1,17 @@
+.custom-banner {
+  row-gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.custom-banner.banner--medium .media .banner__content {
+  display: flex;
+  height: 100%;
+}
+
+.custom-banner .banner__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+}
