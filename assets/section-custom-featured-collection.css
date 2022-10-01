@@ -1,0 +1,78 @@
+.custom-featured-collection .card__inner .card__content {
+  display: none;
+}
+
+.custom-featured-collection .card__heading {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 24px;
+  font-family: 'GT Super Display Italic';
+}
+
+.custom-featured-collection .card-information > .price {
+  font-family: 'Platform';
+}
+
+.custom-featured-collection .title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 749px) {
+  .custom-featured-collection .slider-buttons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .custom-featured-collection .slider-buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    justify-content: space-between;
+  }
+
+  .custom-featured-collection .slider-button .icon {
+    stroke: black;
+    width: 21px;
+    height: 16px;
+  }
+
+  .custom-featured-collection .slider-button--next .icon, .custom-featured-collection .slider-button--next:not([disabled]):hover .icon {
+    transform: rotate(180deg);
+  }
+
+  .custom-featured-collection .slider-button--prev .icon, .custom-featured-collection .slider-button--prev:not([disabled]):hover .icon  {
+    transform: rotate(3600deg);
+  }
+
+  .custom-featured-collection .grid {
+    gap: 0.2rem;
+  }
+  
+  .custom-featured-collection .card__information {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+  }
+
+  .custom-featured-collection .card__information h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .custom-featured-collection .card-information .price {
+    font-size: 14px;
+  }
+
+  .custom-featured-collection .card-information {
+    text-align: right;
+  }
+
+  .custom-featured-collection .title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}

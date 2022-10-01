@@ -8,6 +8,7 @@
 .card {
   text-align: var(--card-text-alignment);
   text-decoration: none;
+  background-color: white;
 }
 
 .card:not(.ratio) {

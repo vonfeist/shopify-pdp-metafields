@@ -11,8 +11,6 @@
   margin-bottom: 1.2rem;
   font-family: 'GT Super Display Italic';
   font-style: italic;
-
-
 }
 
 .utility-bar ul {
@@ -28,10 +26,7 @@
 }
 
 .utility-bar__link {
-  font-family: 'Platform Regular';
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+  font-style: italic;
 }
 
 @media screen and (max-width: 749px) {

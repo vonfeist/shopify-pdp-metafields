@@ -626,6 +626,27 @@ h6:empty {
   letter-spacing: 0.25em;
 }
 
+@media screen and (max-width: 749px) {
+  .gradiant-corner {
+    background: linear-gradient(270deg, #F4EDE5 0%, rgba(244, 237, 229, 0) 100%);
+    display: flex !important;
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .gradiant-corner.left {
+    left: 0;
+    right: inherit;
+    transform: rotate(-180deg);
+    z-index: 4;
+  }
+}
+
+
+
 .link--text {
   color: rgb(var(--color-foreground));
 }
