@@ -4,6 +4,38 @@
   margin-bottom: 6rem;
 }
 
+.custom-banner .banner__heading {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.custom-banner .link {
+  color: white;
+}
+
+@media screen and (max-width: 749px) {
+  .custom-banner.banner--large.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media, 
+  .custom-banner.banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    height: 45rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .custom-banner .banner__media-half {
+    width: 49%;
+  }
+
+  .custom-banner .banner__heading {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  
+}
+
+.custom-banner.banner::after, .banner__media::after {
+  position: relative;;
+}
+
 .custom-banner.banner--medium .media .banner__content {
   display: flex;
   height: 100%;
