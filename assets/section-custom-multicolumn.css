@@ -89,10 +89,6 @@
     line-height: 80px;
   }
 
-  .custom-multicolumn .multicolumn-list.slider, .multicolumn-list.grid--4-col-desktop {
-    gap: 0.5rem;
-  }
-
   .custom-multicolumn .multicolumn-list__item, .grid--4-col-desktop .multicolumn-list__item,
   .custom-multicolumn  .grid--1-col-tablet-down .grid__item {
     width: calc(25% - 1rem);
