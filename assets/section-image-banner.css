@@ -444,7 +444,35 @@
 .custom-image-banner-bold .banner__text.subtitle {
   font-family: 'GT Super Display';
   color: #e3FF21;
-  font-size: 40px;
+  font-size: 40px; 
   line-height: 40px;
   font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+
+.custom-hero-banner {
+  padding: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-hero-banner.condensed {
+  padding: 0;
+}
+
+.custom-hero-banner.banner--medium.banner--mobile-bottom:not(.banner--adapt) .banner__media.is-hidden-desktop {
+  height: 66rem;
+}
+
+@media screen and (min-width: 750px) {
+  .custom-hero-banner:not(.condensed) .banner__media img {
+    position: relative;
+    width: calc(100% - 4rem);
+    height: calc(100% - 2rem);
+    margin:auto;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .custom-hero-banner {
+    padding: 0;
+  }
 }

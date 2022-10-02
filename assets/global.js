@@ -411,7 +411,8 @@ class HeaderDrawer extends MenuDrawer {
     super();
 
     this.header = document.querySelector(".header");
-    this.headerWrapper = document.querySelector(".header-wrapper");
+    this.heroBanner = document.querySelector(".custom-hero-banner");
+    this.utilityBar = document.querySelector(".utility-bar");
 
     window.addEventListener("scroll", this.scrollHeader.bind(this));
   }
@@ -429,12 +430,14 @@ class HeaderDrawer extends MenuDrawer {
 
   condensedHeader() {
     this.header.classList.add("condensed");
-    this.headerWrapper.classList.add("condensed");
+    this.heroBanner.classList.remove("condensed");
+    this.utilityBar.classList.add("fixed");
   }
 
   explodedHeader() {
     this.header.classList.remove("condensed");
-    this.headerWrapper.classList.remove("condensed");
+    this.heroBanner.classList.add("condensed");
+    this.utilityBar.classList.remove("fixed");
   }
 
   openMenuDrawer(summaryElement) {
