@@ -2270,8 +2270,8 @@ input[type='checkbox'] {
 .header, .header.exploded.condensed {
   display: grid;
   grid-template-areas: 
-  'heading heading icons left-icon';
-  grid-template-columns: 2fr 1fr 0.4fr;
+  'heading icons left-icon';
+  grid-template-columns: 1fr 1fr 0.4fr;
   grid-template-rows: 1fr;
   align-items: center;
   width: 100%;

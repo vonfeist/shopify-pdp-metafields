@@ -1,45 +1,149 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "16647179402c11a791": {
+      "type": "custom-hero-banner",
+      "settings": {
+        "visible_desktop": false,
+        "image": "shopify:\/\/shop_images\/img.png",
+        "image_2": "shopify:\/\/shop_images\/Screen_Shot_2021-07-06_at_9.26_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "166471800367cf7984": {
+      "type": "custom-multicolumn",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "1664718003088711a4-0": {
+          "type": "column",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "background_color": "green",
+            "image": "shopify:\/\/shop_images\/Rectangle_289.png",
+            "title": "Make a scene.",
+            "text": "<p>Everything you need for a great party, from decor to drinks and games.  <\/p>",
+            "link_label": "Find your scene",
+            "link": ""
           }
         },
-        "text": {
-          "type": "text",
+        "1664718003088711a4-1": {
+          "type": "column",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "background_color": "blue",
+            "image": "shopify:\/\/shop_images\/Rectangle_289-1.png",
+            "title": "Make it extra.",
+            "text": "<p>Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.<\/p>",
+            "link_label": "shop party supplies",
+            "link": ""
           }
         },
-        "button": {
-          "type": "buttons",
+        "1664718003088711a4-2": {
+          "type": "column",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "background_color": "yellow",
+            "image": "shopify:\/\/shop_images\/Rectangle_289-3.png",
+            "title": "Make it joyful.",
+            "text": "<p>Create the arrangement of your dreams with DIY kits from Wild & Flowers.<\/p>",
+            "link_label": "shop florals",
+            "link": ""
+          }
+        },
+        "fa932df2-422c-4b7a-8f2b-67273d552a12": {
+          "type": "column",
+          "settings": {
+            "background_color": "purple",
+            "image": "shopify:\/\/shop_images\/Rectangle_289-2.png",
+            "title": "Make it happen.",
+            "text": "<p>Need a bartender, caterer, or DJ? Just add to cart. It’s that easy.<\/p>",
+            "link_label": "browse vendors",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "1664718003088711a4-0",
+        "1664718003088711a4-1",
+        "1664718003088711a4-2",
+        "fa932df2-422c-4b7a-8f2b-67273d552a12"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "title": "Having Fun 101",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "landscape",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1664718007ae1f39ed": {
+      "type": "custom-image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_324.png",
+        "heading_1": "Housewarming Gifts for the Host",
+        "button_label_1": "discover them all",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "image_2": "shopify:\/\/shop_images\/Rectangle_324-1.png",
+        "heading_2": "The Limited-Edition Holiday Scene",
+        "button_label_2": "shop the scene",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
         "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "16647183542047bee5": {
+      "type": "custom-image-banner-bold",
+      "blocks": {
+        "1664718354f9e18cbb-0": {
+          "type": "heading",
+          "settings": {
+            "image_headline": "shopify:\/\/shop_images\/Layer_2.png",
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "1664718354f9e18cbb-1": {
+          "type": "text",
+          "settings": {
+            "text": "No occasion necessary.",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "1664718354f9e18cbb-0",
+        "1664718354f9e18cbb-1"
+      ],
+      "settings": {
+        "visible_desktop": false,
+        "image": "shopify:\/\/shop_images\/img_2810a498-3906-4e05-a84f-a94f3db07d74.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
@@ -47,165 +151,88 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "166471857009948eb6": {
+      "type": "custom-slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "166471857050555df4-0": {
+          "type": "slide",
           "settings": {
-            "heading": "<p>Talk about your brand</p>",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/img_acf5146b-fc5e-48f8-b76f-cff70dcb7dad.png",
+            "heading": "The scene",
+            "heading_size": "h1",
+            "subheading": "Supper Club",
+            "button_label": "Shop now",
+            "link": "",
+            "button_style_secondary": true,
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-2",
+            "text_alignment_mobile": "center"
           }
         },
-        "text": {
-          "type": "text",
+        "166471857050555df4-1": {
+          "type": "slide",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "image": "shopify:\/\/shop_images\/Rectangle_324-1.png",
+            "heading": "The scene",
+            "heading_size": "h1",
+            "subheading": "Housewarming Gifts",
+            "button_label": "Shop now",
+            "link": "",
+            "button_style_secondary": true,
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "166471857050555df4-0",
+        "166471857050555df4-1"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "166471857353e5a0e5": {
+      "type": "custom-featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "title": "Party a la carte",
         "heading_size": "h1",
         "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "glassware",
+        "products_to_show": 6,
         "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "16647179402c11a791",
+    "166471800367cf7984",
+    "1664718007ae1f39ed",
+    "16647183542047bee5",
+    "166471857009948eb6",
+    "166471857353e5a0e5"
   ]
 }
