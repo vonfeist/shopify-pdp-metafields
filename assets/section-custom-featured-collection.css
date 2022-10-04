@@ -57,7 +57,7 @@
     flex-basis: 33%;
   }
 
-  .custom-featured-collection .slider-button .icon {
+  .custom-featured-collection .icon {
     stroke: black;
     width: 21px;
     height: 16px;
@@ -110,4 +110,44 @@
     font-size: 80px;
     line-height: 80px;
   }
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-container .card__badge {
+  display: none;
+}
+
+.swiper-button {
+  display: none;
+}
+
+.custom-swiper.collection__view-all {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .swiper-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .swiper-button {
+    display: block;
+  }
+}
+
+
+
+.swiper-container .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+.swiper-container .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+
+.custom-featured-collection .swiper-container .card__information {
+  max-width: 90%;
 }
