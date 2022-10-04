@@ -199,8 +199,8 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "166471857353e5a0e5": {
-      "type": "custom-featured-collection",
+    "16649074368e6945a8": {
+      "type": "custom-swiper",
       "settings": {
         "title": "Party a la carte",
         "heading_size": "h1",
@@ -208,20 +208,15 @@
         "show_description": false,
         "description_style": "body",
         "collection": "glassware",
-        "products_to_show": 6,
-        "columns_desktop": 3,
+        "products_to_show": 3,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "view_all_style": "link",
         "color_scheme": "background-1",
         "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "columns_mobile": "2",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -233,6 +228,6 @@
     "1664718007ae1f39ed",
     "16647183542047bee5",
     "166471857009948eb6",
-    "166471857353e5a0e5"
+    "16649074368e6945a8"
   ]
 }
